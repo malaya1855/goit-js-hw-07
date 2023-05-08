@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-const itemGallery = document.querySelector('.gallery')
+const itemGalleryEd = document.querySelector('.gallery')
 
 const newGallery = galleryItems.map(
     item => `<li class="gallery__item">
@@ -14,7 +14,7 @@ const newGallery = galleryItems.map(
     </a>
     </li>`)
     .join("")
-itemGallery.insertAdjacentHTML('beforeend', newGallery)
+itemGalleryEd.insertAdjacentHTML('beforeend', newGallery)
 
 document.addEventListener('click', onOpenModal) 
 

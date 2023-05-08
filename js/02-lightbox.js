@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 
-const itemGallery = document.querySelector('.gallery')
+const itemGalleryEl = document.querySelector('.gallery')
 
 const newGallery = galleryItems.map(
     item => `<li class="gallery__item">
@@ -9,6 +9,6 @@ const newGallery = galleryItems.map(
     </a>
  </li>`)
     .join("")
-itemGallery.insertAdjacentHTML('beforeend', newGallery)
+itemGalleryEl.insertAdjacentHTML('beforeend', newGallery)
 
-new SimpleLightbox('.gallery a', {'captionsData': 'alt', 'captionDelay': 250});
+new SimpleLightbox('.gallery a', {'captionType': 'alt', 'captionDelay': 250});
