@@ -22,9 +22,9 @@ function onOpenModal (event){
         event.preventDefault();
     if (event.target.nodeName !== "IMG") {return}
 const instance = basicLightbox.create(`<img src="${event.target.dataset.source}"/>`, 
-{onShow: (instance) => {document.addEventListener('keydown', onCloseModal)},
+{onShow: (instance) => {itemGalleryEl.addEventListener('keydown', onCloseModal)},
 
-onClose: (instance) => {document.removeEventListener('keydown', onCloseModal)}}) 
+onClose: (instance) => {itemGalleryEl.removeEventListener('keydown', onCloseModal)}}) 
 
 instance.show()
 

@@ -11,4 +11,4 @@ const newGallery = galleryItems.map(
     .join("")
 itemGalleryEl.insertAdjacentHTML('beforeend', newGallery)
 
-new SimpleLightbox('.gallery a', {'captionType': 'alt', 'captionDelay': 250});
+new SimpleLightbox('.gallery a', {'captionsData': 'alt', 'captionDelay': 250});
