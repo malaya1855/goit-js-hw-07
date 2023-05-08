@@ -21,8 +21,8 @@ document.addEventListener('click', onOpenModal)
 function onOpenModal (event){
         event.preventDefault();
     if (event.target.nodeName !== "IMG") {return}
-const imgSource = event.target.getAttribute('data-source')
-const instance = basicLightbox.create(`<img src="${imgSource}"/>`)
+const instance = basicLightbox.create(`<img src="${event.target.dataset.source}"/>`) 
+
 instance.show()
 
 document.addEventListener('keydown', onCloseModal)
@@ -31,5 +31,6 @@ function onCloseModal (event) {
         if (event.code === "Escape") {
             instance.close(); 
             document.removeEventListener('keydown', onCloseModal)
-        }}
+        }
+    }
 }
